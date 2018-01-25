@@ -11,14 +11,17 @@ const client  = new Discord.Client();
 /* REQUIRED FILES */
 const config = reload('./config.json');
 
-client.on('ready', () => {
-	console.log(`Logged in as ${client.user.tag}!`);
-});
+/* LOCAL VARIABLES */
+var logger;
 
-client.on('message', msg => {
-	if (msg.content === 'ping') {
-		msg.reply('Pong!');
-	}
-});
+logger = new (reload('./utils/Logger.js'))(config.logTimestamp);
 
-client.login(config.token);
+function login() {
+	logger.logBold('Logging in...', 'green');
+	client.login(config.token).catch(error => {
+		logger.error(error, 'LOGIN ERROR');
+	});
+}
+
+/* INIT EVERYTHING */
+login();
