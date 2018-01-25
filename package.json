@@ -1,0 +1,27 @@
+{
+  "name": "runecord",
+  "version": "5.0.0",
+  "description": "A RuneScape Discord bot.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unlucky4ever/RuneCord.git"
+  },
+  "keywords": [
+    "discord",
+    "runescape"
+  ],
+  "author": "Witty (unlucky4ever)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unlucky4ever/RuneCord/issues"
+  },
+  "homepage": "https://github.com/unlucky4ever/RuneCord#readme",
+  "dependencies": {
+    "discord.js": "11.3.0",
+    "require-reload": "0.2.2"
+  }
+}
